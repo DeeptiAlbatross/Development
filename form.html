@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  id="form1">
+        <h1>WELCOME TO MY REGISTRATION 
+            <br>FORM
+            </h1>
+        <form  action="first.html" id="Mainform">
+            <label for="fname">Enter name:</label><br>
+            <input type="text" placeholder="Enter name" >
+            <br>
+            <br>
+            <label for="email">Enter Email:</label><br>
+            <input type="text" placeholder="Enter email" >
+            <br>
+            <br>
+            
+            <label class="Password" for="password">Enter password:</label><br>
+            <input type="password" placeholder="Enter password" >
+            <br>
+            <br>
+
+            <label for="fname">Enter Mobile:</label><br>
+            <input type="text" placeholder="Enter mobile no">
+            <br>
+            <br>
+            <label for="fname">Choose city:</label>
+              <select name="city" id="city">
+                <option value="Agra">Agra</option>
+                <option value="Aligarh">Aligarh</option>
+                <option value="Meerat">Meerat</option>
+                <option value="Ghaziabad">Ghaziabad</option>
+              </select>
+              <br>
+           
+            <br>
+            <label for="Hobby">Choose Your Hobby:</label><br>
+            <input type="checkbox" name="" id="">Football <br>
+            <input type="checkbox">Basketball <br>
+            <input type="checkbox">Baseball <br>
+            <input type="checkbox">Cricket <br>
+            <input type="checkbox">Singing <br>
+            <input type="checkbox">Dancing <br>
+            <br>
+            <br>
+
+            <label for="fname">Enter DOB:</label><br>
+            <input type="date">
+            <br>
+            <br>
+
+            <label for="Gname">Choose Gender:</label><br>
+            <input type="radio">Male</input>
+            <br>
+            <input type="radio">Female</input>
+            <br>
+            <br>
+          
+            <input value="submit" onclick ="displayValues()" type="button" class="btn">
+        </form>
+    </div>
+    <script>
+        function displayValues() {
+          // Get the form element
+          var form = document.getElementById('Mainform');
+
+          var formData = new FormData(form);
+          var formValues={};
+
+          formData.forEach(function(value, key) {
+            formValues[Key]=value;
+          });
+
+          alert("form values:\n" + JSON.stringify(formValues,null,2));
+      }
+  </script>
+ 
+</body>
+</html>
